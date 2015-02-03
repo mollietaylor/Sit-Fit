@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Parse.setApplicationId("", clientKey: "")
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.makeKeyAndVisible()
+        
+        var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var loginVC = mainStoryboard.instantiateInitialViewController() as LoginViewController
+        
+        window?.rootViewController = loginVC
+        
         return true
     }
 

@@ -10,31 +10,31 @@
 	<string>Sit Fit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>70F7E488665BDC354CAC51E0F8BDC860710F21B7</key>
-		<string>https://github.com/mollietaylor/The-Iron-Yard-Swift.git</string>
+		<key>74BAE40AA9C7538BEDEEF4E9E5E56D0283A7582F</key>
+		<string>https://github.com/mollietaylor/Sit-Fit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Sit Fit/Sit Fit.xcodeproj</string>
+	<string>Sit Fit.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>70F7E488665BDC354CAC51E0F8BDC860710F21B7</key>
-		<string>../../..</string>
+		<key>74BAE40AA9C7538BEDEEF4E9E5E56D0283A7582F</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mollietaylor/The-Iron-Yard-Swift.git</string>
+	<string>https://github.com/mollietaylor/Sit-Fit.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>70F7E488665BDC354CAC51E0F8BDC860710F21B7</string>
+	<string>74BAE40AA9C7538BEDEEF4E9E5E56D0283A7582F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>70F7E488665BDC354CAC51E0F8BDC860710F21B7</string>
+			<string>74BAE40AA9C7538BEDEEF4E9E5E56D0283A7582F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Swift</string>
+			<string>Sit%20Fit</string>
 		</dict>
 	</array>
 </dict>
