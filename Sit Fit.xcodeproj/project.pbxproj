@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC4EFAEE1A810F8700F3A2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFAED1A810F8700F3A2F8 /* AppDelegate.swift */; };
+		EC4EFAF01A810F8700F3A2F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFAEF1A810F8700F3A2F8 /* ViewController.swift */; };
+		EC4EFAF31A810F8700F3A2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4EFAF11A810F8700F3A2F8 /* Main.storyboard */; };
+		EC4EFAF51A810F8700F3A2F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4EFAF41A810F8700F3A2F8 /* Images.xcassets */; };
+		EC4EFAF81A810F8700F3A2F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4EFAF61A810F8700F3A2F8 /* LaunchScreen.xib */; };
+		EC4EFB041A810F8700F3A2F8 /* Sit_FitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB031A810F8700F3A2F8 /* Sit_FitTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC4EFAFE1A810F8700F3A2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC4EFAE01A810F8700F3A2F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC4EFAE71A810F8700F3A2F8;
+			remoteInfo = "Sit Fit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC4EFAE81A810F8700F3A2F8 /* Sit Fit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sit Fit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC4EFAEC1A810F8700F3A2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC4EFAED1A810F8700F3A2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC4EFAEF1A810F8700F3A2F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC4EFAF21A810F8700F3A2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC4EFAF41A810F8700F3A2F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC4EFAF71A810F8700F3A2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EC4EFAFD1A810F8700F3A2F8 /* Sit FitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sit FitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC4EFB021A810F8700F3A2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC4EFB031A810F8700F3A2F8 /* Sit_FitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sit_FitTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC4EFAE51A810F8700F3A2F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC4EFAFA1A810F8700F3A2F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC4EFADF1A810F8700F3A2F8 = {
+			isa = PBXGroup;
+			children = (
+				EC4EFAEA1A810F8700F3A2F8 /* Sit Fit */,
+				EC4EFB001A810F8700F3A2F8 /* Sit FitTests */,
+				EC4EFAE91A810F8700F3A2F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC4EFAE91A810F8700F3A2F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EFAE81A810F8700F3A2F8 /* Sit Fit.app */,
+				EC4EFAFD1A810F8700F3A2F8 /* Sit FitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC4EFAEA1A810F8700F3A2F8 /* Sit Fit */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EFAED1A810F8700F3A2F8 /* AppDelegate.swift */,
+				EC4EFAEF1A810F8700F3A2F8 /* ViewController.swift */,
+				EC4EFAF11A810F8700F3A2F8 /* Main.storyboard */,
+				EC4EFAF41A810F8700F3A2F8 /* Images.xcassets */,
+				EC4EFAF61A810F8700F3A2F8 /* LaunchScreen.xib */,
+				EC4EFAEB1A810F8700F3A2F8 /* Supporting Files */,
+			);
+			path = "Sit Fit";
+			sourceTree = "<group>";
+		};
+		EC4EFAEB1A810F8700F3A2F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EFAEC1A810F8700F3A2F8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC4EFB001A810F8700F3A2F8 /* Sit FitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EFB031A810F8700F3A2F8 /* Sit_FitTests.swift */,
+				EC4EFB011A810F8700F3A2F8 /* Supporting Files */,
+			);
+			path = "Sit FitTests";
+			sourceTree = "<group>";
+		};
+		EC4EFB011A810F8700F3A2F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EFB021A810F8700F3A2F8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC4EFAE71A810F8700F3A2F8 /* Sit Fit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC4EFB071A810F8700F3A2F8 /* Build configuration list for PBXNativeTarget "Sit Fit" */;
+			buildPhases = (
+				EC4EFAE41A810F8700F3A2F8 /* Sources */,
+				EC4EFAE51A810F8700F3A2F8 /* Frameworks */,
+				EC4EFAE61A810F8700F3A2F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sit Fit";
+			productName = "Sit Fit";
+			productReference = EC4EFAE81A810F8700F3A2F8 /* Sit Fit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC4EFAFC1A810F8700F3A2F8 /* Sit FitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC4EFB0A1A810F8700F3A2F8 /* Build configuration list for PBXNativeTarget "Sit FitTests" */;
+			buildPhases = (
+				EC4EFAF91A810F8700F3A2F8 /* Sources */,
+				EC4EFAFA1A810F8700F3A2F8 /* Frameworks */,
+				EC4EFAFB1A810F8700F3A2F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC4EFAFF1A810F8700F3A2F8 /* PBXTargetDependency */,
+			);
+			name = "Sit FitTests";
+			productName = "Sit FitTests";
+			productReference = EC4EFAFD1A810F8700F3A2F8 /* Sit FitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC4EFAE01A810F8700F3A2F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Proximity Viz LLC";
+				TargetAttributes = {
+					EC4EFAE71A810F8700F3A2F8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EC4EFAFC1A810F8700F3A2F8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EC4EFAE71A810F8700F3A2F8;
+					};
+				};
+			};
+			buildConfigurationList = EC4EFAE31A810F8700F3A2F8 /* Build configuration list for PBXProject "Sit Fit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC4EFADF1A810F8700F3A2F8;
+			productRefGroup = EC4EFAE91A810F8700F3A2F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC4EFAE71A810F8700F3A2F8 /* Sit Fit */,
+				EC4EFAFC1A810F8700F3A2F8 /* Sit FitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC4EFAE61A810F8700F3A2F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC4EFAF31A810F8700F3A2F8 /* Main.storyboard in Resources */,
+				EC4EFAF81A810F8700F3A2F8 /* LaunchScreen.xib in Resources */,
+				EC4EFAF51A810F8700F3A2F8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC4EFAFB1A810F8700F3A2F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC4EFAE41A810F8700F3A2F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC4EFAF01A810F8700F3A2F8 /* ViewController.swift in Sources */,
+				EC4EFAEE1A810F8700F3A2F8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC4EFAF91A810F8700F3A2F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC4EFB041A810F8700F3A2F8 /* Sit_FitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC4EFAFF1A810F8700F3A2F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC4EFAE71A810F8700F3A2F8 /* Sit Fit */;
+			targetProxy = EC4EFAFE1A810F8700F3A2F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC4EFAF11A810F8700F3A2F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC4EFAF21A810F8700F3A2F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC4EFAF61A810F8700F3A2F8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC4EFAF71A810F8700F3A2F8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC4EFB051A810F8700F3A2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC4EFB061A810F8700F3A2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC4EFB081A810F8700F3A2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sit Fit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC4EFB091A810F8700F3A2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sit Fit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EC4EFB0B1A810F8700F3A2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sit FitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sit Fit.app/Sit Fit";
+			};
+			name = Debug;
+		};
+		EC4EFB0C1A810F8700F3A2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sit FitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sit Fit.app/Sit Fit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC4EFAE31A810F8700F3A2F8 /* Build configuration list for PBXProject "Sit Fit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC4EFB051A810F8700F3A2F8 /* Debug */,
+				EC4EFB061A810F8700F3A2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC4EFB071A810F8700F3A2F8 /* Build configuration list for PBXNativeTarget "Sit Fit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC4EFB081A810F8700F3A2F8 /* Debug */,
+				EC4EFB091A810F8700F3A2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC4EFB0A1A810F8700F3A2F8 /* Build configuration list for PBXNativeTarget "Sit FitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC4EFB0B1A810F8700F3A2F8 /* Debug */,
+				EC4EFB0C1A810F8700F3A2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC4EFAE01A810F8700F3A2F8 /* Project object */;
+}
