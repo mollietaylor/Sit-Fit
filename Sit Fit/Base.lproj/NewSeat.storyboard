@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ctU-16-kBt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="hG9-Wg-OlC"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2t-U3-Lp5">
                                 <rect key="frame" x="308" y="536" width="276" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -54,21 +60,48 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmS-xM-SZQ">
+                                <rect key="frame" x="20" y="236" width="560" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sqs-Wj-hGu"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.2156862745" green="0.31372549020000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="jN9-xD-6gI" eventType="touchUpInside" id="6ap-Rb-B7i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2156862745" green="0.31372549020000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ZmS-xM-SZQ" firstAttribute="top" secondItem="rFD-iM-8aS" secondAttribute="bottom" constant="172" id="2KI-50-G6B"/>
                             <constraint firstItem="wHD-xS-L64" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leadingMargin" id="4ya-Cb-qxq"/>
+                            <constraint firstItem="ZmS-xM-SZQ" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leading" constant="20" id="9br-Ra-mGh"/>
                             <constraint firstItem="i2t-U3-Lp5" firstAttribute="width" secondItem="wHD-xS-L64" secondAttribute="width" id="Cvk-69-pJu"/>
+                            <constraint firstAttribute="trailing" secondItem="ZmS-xM-SZQ" secondAttribute="trailing" constant="20" id="HgO-h8-qp9"/>
+                            <constraint firstAttribute="trailing" secondItem="ctU-16-kBt" secondAttribute="trailing" id="M8c-2i-J7N"/>
                             <constraint firstItem="i2t-U3-Lp5" firstAttribute="trailing" secondItem="v26-ux-W03" secondAttribute="trailingMargin" id="Msf-Sv-vNx"/>
                             <constraint firstItem="AIe-ow-llz" firstAttribute="top" secondItem="wHD-xS-L64" secondAttribute="bottom" constant="20" id="Pnn-fY-4YF"/>
                             <constraint firstItem="AIe-ow-llz" firstAttribute="top" secondItem="i2t-U3-Lp5" secondAttribute="bottom" constant="20" id="atA-fs-b0a"/>
                             <constraint firstItem="rFD-iM-8aS" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leading" constant="20" id="dXN-Rd-35w"/>
                             <constraint firstItem="rFD-iM-8aS" firstAttribute="top" secondItem="v26-ux-W03" secondAttribute="top" constant="20" id="j5W-PI-jdS"/>
+                            <constraint firstItem="ctU-16-kBt" firstAttribute="top" secondItem="v26-ux-W03" secondAttribute="top" id="nVx-SC-cnc"/>
                             <constraint firstAttribute="trailing" secondItem="rFD-iM-8aS" secondAttribute="trailing" constant="20" id="pIm-MN-12a"/>
                             <constraint firstItem="i2t-U3-Lp5" firstAttribute="leading" secondItem="wHD-xS-L64" secondAttribute="trailing" constant="16" id="phG-ib-nS2"/>
+                            <constraint firstItem="ZmS-xM-SZQ" firstAttribute="top" secondItem="ctU-16-kBt" secondAttribute="bottom" constant="-64" id="wc8-5z-ktb"/>
+                            <constraint firstItem="ctU-16-kBt" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leading" id="zcg-Qq-drU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2KI-50-G6B"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="seatImageView" destination="ctU-16-kBt" id="tlZ-Ha-fUX"/>
                         <outlet property="seatNameField" destination="rFD-iM-8aS" id="0zx-0o-AI3"/>
                     </connections>
                 </viewController>

@@ -9,5 +9,15 @@
 import UIKit
 
 class MyFeedTVC: FeedTVC {
+    
+    override func refreshFeed() {
+        
+        FeedData.mainData().refreshMyFeedItems { () -> () in
+            
+            self.tableView.reloadData()
+            
+        }
+        
+    }
 
 }

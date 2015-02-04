@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        Parse.setApplicationId("", clientKey: "")
+        // Jo's keys
+        Parse.setApplicationId("yJwkYrve51po54BWFsndggMLXv9INdBSWeZYqlMG", clientKey: "5MzZMBYXK2q76njyBYbweTMpvzBfYZTGDjrbqyFm")
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()

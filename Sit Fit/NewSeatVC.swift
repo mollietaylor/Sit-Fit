@@ -8,18 +8,38 @@
 
 import UIKit
 
-class NewSeatVC: UIViewController {
+class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // TODO: var seats: [PFObject]?
     
     @IBOutlet weak var seatNameField: UITextField!
+    @IBOutlet weak var seatImageView: UIImageView!
     
-    
+    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imagePicker.delegate = self
+        imagePicker.sourceType = .Camera
+        
+        
+        
+    }
+    
+    @IBAction func takePhoto(sender: AnyObject) {
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        
+        var image = info[UIImagePickerControllerOriginalImage] as UIImage
+        self.seatImageView.image = image
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     @IBAction func cancelSeat(sender: AnyObject) {
@@ -33,6 +53,8 @@ class NewSeatVC: UIViewController {
         // TODO: create PFObject and add it to seats
         var newSeat = PFObject(className: "Seat")
         newSeat["name"] = seatNameField.text
+        newSeat["creator"] = PFUser.currentUser()
+        newSeat.saveInBackground()
         
         FeedData.mainData().feedItems.append(newSeat)
         
