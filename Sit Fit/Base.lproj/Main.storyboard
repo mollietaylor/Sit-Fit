@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -116,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" id="OE3-xu-Euc">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="200" id="OE3-xu-Euc" customClass="FeedCell" customModule="Sit_Fit" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OE3-xu-Euc" id="3Aq-gQ-yky">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -152,12 +153,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" id="30j-6N-ffh">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="200" id="30j-6N-ffh" customClass="FeedCell" customModule="Sit_Fit" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="30j-6N-ffh" id="pgy-t5-FsC">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-cX-NbI">
+                                            <rect key="frame" x="401" y="0.0" width="199" height="199"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="XpZ-cX-NbI" secondAttribute="height" multiplier="1:1" id="ZhA-Bp-7TM"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="XpZ-cX-NbI" secondAttribute="trailing" id="4OR-Gs-oRc"/>
+                                        <constraint firstAttribute="bottom" secondItem="XpZ-cX-NbI" secondAttribute="bottom" id="Wex-R9-8TW"/>
+                                        <constraint firstItem="XpZ-cX-NbI" firstAttribute="top" secondItem="pgy-t5-FsC" secondAttribute="top" id="gDS-Fz-AxF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageView" destination="pgy-t5-FsC" id="itO-FU-Y17"/>
+                                    <outlet property="seatImageView" destination="XpZ-cX-NbI" id="eQn-E9-GjW"/>
                                     <segue destination="SSZ-1v-78R" kind="show" id="Mvy-bD-oR0"/>
                                 </connections>
                             </tableViewCell>

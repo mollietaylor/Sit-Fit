@@ -54,9 +54,17 @@ class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         var newSeat = PFObject(className: "Seat")
         newSeat["name"] = seatNameField.text
         newSeat["creator"] = PFUser.currentUser()
+        
+        // image
+        let imageFile = PFFile(name: "image.png", data: UIImagePNGRepresentation(self.seatImageView.image))
+        newSeat["image"] = imageFile
+        
         newSeat.saveInBackground()
         
         FeedData.mainData().feedItems.append(newSeat)
+        
+//        when you hit save on a new seat, create a PFFile using the UIImage on the seatImageView
+        
         
         dismissViewControllerAnimated(true, completion: nil)
         
