@@ -30,6 +30,7 @@
 		EC4EFB3A1A83B3D900F3A2F8 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB391A83B3D900F3A2F8 /* FeedCell.swift */; };
 		EC4EFB3C1A83CF3E00F3A2F8 /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB3B1A83CF3E00F3A2F8 /* FourSquareRequest.swift */; };
 		EC4EFB3E1A83CF9600F3A2F8 /* VenuesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB3D1A83CF9600F3A2F8 /* VenuesTVC.swift */; };
+		EC4EFB6E1A83FB0000F3A2F8 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB6D1A83FB0000F3A2F8 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		EC4EFB391A83B3D900F3A2F8 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		EC4EFB3B1A83CF3E00F3A2F8 /* FourSquareRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareRequest.swift; sourceTree = "<group>"; };
 		EC4EFB3D1A83CF9600F3A2F8 /* VenuesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTVC.swift; sourceTree = "<group>"; };
+		EC4EFB6D1A83FB0000F3A2F8 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		EC4EFB6F1A83FBA800F3A2F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,7 @@
 				EC4EFB161A8130ED00F3A2F8 /* FeedTVC.swift */,
 				EC4EFB181A81312200F3A2F8 /* MyFeedTVC.swift */,
 				EC4EFB391A83B3D900F3A2F8 /* FeedCell.swift */,
+				EC4EFB6D1A83FB0000F3A2F8 /* MapVC.swift */,
 				EC4EFAF11A810F8700F3A2F8 /* Main.storyboard */,
 			);
 			name = "Main Feeds & Login";
@@ -186,6 +190,7 @@
 		EC4EFB1C1A81542E00F3A2F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC4EFB6F1A83FBA800F3A2F8 /* MapKit.framework */,
 				EC4EFB2A1A81577400F3A2F8 /* AudioToolbox.framework */,
 				EC4EFB2B1A81577400F3A2F8 /* libsqlite3.dylib */,
 				EC4EFB2C1A81577400F3A2F8 /* MobileCoreServices.framework */,
@@ -314,6 +319,7 @@
 				EC4EFB1B1A8151F900F3A2F8 /* NewSeatVC.swift in Sources */,
 				EC4EFB3E1A83CF9600F3A2F8 /* VenuesTVC.swift in Sources */,
 				EC4EFB131A811BA100F3A2F8 /* LoginViewController.swift in Sources */,
+				EC4EFB6E1A83FB0000F3A2F8 /* MapVC.swift in Sources */,
 				EC4EFB191A81312200F3A2F8 /* MyFeedTVC.swift in Sources */,
 				EC4EFB341A815B6700F3A2F8 /* FeedData.swift in Sources */,
 				EC4EFAEE1A810F8700F3A2F8 /* AppDelegate.swift in Sources */,
