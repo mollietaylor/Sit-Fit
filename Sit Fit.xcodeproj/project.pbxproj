@@ -27,6 +27,9 @@
 		EC4EFB301A81577400F3A2F8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4EFB2C1A81577400F3A2F8 /* MobileCoreServices.framework */; };
 		EC4EFB311A81577400F3A2F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4EFB2D1A81577400F3A2F8 /* SystemConfiguration.framework */; };
 		EC4EFB341A815B6700F3A2F8 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB331A815B6700F3A2F8 /* FeedData.swift */; };
+		EC4EFB3A1A83B3D900F3A2F8 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB391A83B3D900F3A2F8 /* FeedCell.swift */; };
+		EC4EFB3C1A83CF3E00F3A2F8 /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB3B1A83CF3E00F3A2F8 /* FourSquareRequest.swift */; };
+		EC4EFB3E1A83CF9600F3A2F8 /* VenuesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EFB3D1A83CF9600F3A2F8 /* VenuesTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		EC4EFB2C1A81577400F3A2F8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EC4EFB2D1A81577400F3A2F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EC4EFB331A815B6700F3A2F8 /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		EC4EFB391A83B3D900F3A2F8 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		EC4EFB3B1A83CF3E00F3A2F8 /* FourSquareRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareRequest.swift; sourceTree = "<group>"; };
+		EC4EFB3D1A83CF9600F3A2F8 /* VenuesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 				EC4EFB121A811BA100F3A2F8 /* LoginViewController.swift */,
 				EC4EFB161A8130ED00F3A2F8 /* FeedTVC.swift */,
 				EC4EFB181A81312200F3A2F8 /* MyFeedTVC.swift */,
+				EC4EFB391A83B3D900F3A2F8 /* FeedCell.swift */,
 				EC4EFAF11A810F8700F3A2F8 /* Main.storyboard */,
 			);
 			name = "Main Feeds & Login";
@@ -170,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4EFB1A1A8151F900F3A2F8 /* NewSeatVC.swift */,
+				EC4EFB3D1A83CF9600F3A2F8 /* VenuesTVC.swift */,
 				EC4EFB0F1A81175800F3A2F8 /* NewSeat.storyboard */,
 			);
 			name = "New Seat";
@@ -195,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4EFB331A815B6700F3A2F8 /* FeedData.swift */,
+				EC4EFB3B1A83CF3E00F3A2F8 /* FourSquareRequest.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -300,7 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4EFB3C1A83CF3E00F3A2F8 /* FourSquareRequest.swift in Sources */,
+				EC4EFB3A1A83B3D900F3A2F8 /* FeedCell.swift in Sources */,
 				EC4EFB1B1A8151F900F3A2F8 /* NewSeatVC.swift in Sources */,
+				EC4EFB3E1A83CF9600F3A2F8 /* VenuesTVC.swift in Sources */,
 				EC4EFB131A811BA100F3A2F8 /* LoginViewController.swift in Sources */,
 				EC4EFB191A81312200F3A2F8 /* MyFeedTVC.swift in Sources */,
 				EC4EFB341A815B6700F3A2F8 /* FeedData.swift in Sources */,

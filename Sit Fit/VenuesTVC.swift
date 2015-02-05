@@ -1,41 +1,50 @@
 //
-//  FeedTVC.swift
+//  VenuesTVC.swift
 //  Sit Fit
 //
-//  Created by Mollie on 2/3/15.
+//  Created by Mollie on 2/5/15.
 //  Copyright (c) 2015 Proximity Viz LLC. All rights reserved.
 //
 
 import UIKit
+import CoreLocation
 
-class FeedTVC: UITableViewController {
+var onceToken: dispatch_once_t = 0
+
+class VenuesTVC: UITableViewController, CLLocationManagerDelegate {
+    
+    var manager = CLLocationManager()
+    var foundVenues: [AnyObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        manager.requestWhenInUseAuthorization()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        manager.startUpdatingLocation()
+        
     }
     
-    override func viewWillAppear(animated: Bool) {
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
-        refreshFeed()
-        
-    }
-    
-    func refreshFeed() {
-        
-        FeedData.mainData().refreshFeedItems { () -> () in
+        dispatch_once(&onceToken) { () -> Void in
             
-            self.tableView.reloadData()
+            if let location = locations.last as? CLLocation {
+                
+                self.foundVenues = FourSquareRequest.requestVenuesWithLocation(location)
+                self.tableView.reloadData()
+                
+            }
             
         }
         
-    }
+        manager.stopUpdatingLocation()
     
-    @IBAction func addNewSeat(sender: AnyObject) {
-        
-        var newSeatSB = UIStoryboard(name: "NewSeat", bundle: nil)
-        var newSeatVC = newSeatSB.instantiateInitialViewController() as NewSeatVC
-        presentViewController(newSeatVC, animated: true, completion: nil)
+//        var userLocation = locations.last as CLLocation
+//        let foundVenues = FourSquareRequest.requestVenuesWithLocation(userLocation)
+//        self.tableView.reloadData()
+//        manager.stopUpdatingLocation()
         
     }
 
@@ -47,17 +56,28 @@ class FeedTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FeedData.mainData().feedItems.count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return foundVenues.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> FeedCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("feedCell", forIndexPath: indexPath) as FeedCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("venueCell", forIndexPath: indexPath) as UITableViewCell
 
-        let seat = FeedData.mainData().feedItems[indexPath.row]
-        
-        cell.seatInfo = seat
+        let venue = foundVenues[indexPath.row] as [String:AnyObject]
+        cell.textLabel?.text = venue["name"] as? String
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let venue = foundVenues[indexPath.row] as [String:AnyObject]
+        
+        FeedData.mainData().selectedVenue = venue
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
     /*

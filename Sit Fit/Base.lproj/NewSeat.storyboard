@@ -23,21 +23,6 @@
                                     <constraint firstAttribute="height" constant="300" id="hG9-Wg-OlC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2t-U3-Lp5">
-                                <rect key="frame" x="308" y="536" width="276" height="44"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Y1n-JI-mWf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.99607843139999996" green="0.5450980392" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveSeat:" destination="jN9-xD-6gI" eventType="touchUpInside" id="IFi-fb-BU7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHD-xS-L64">
                                 <rect key="frame" x="16" y="536" width="276" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -74,6 +59,35 @@
                                     <action selector="takePhoto:" destination="jN9-xD-6gI" eventType="touchUpInside" id="6ap-Rb-B7i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVC-0f-d0Z">
+                                <rect key="frame" x="20" y="320" width="560" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pV7-fp-VD2"/>
+                                </constraints>
+                                <state key="normal" title="Select Venue">
+                                    <color key="titleColor" red="0.2156862745" green="0.31372549020000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="q2p-oP-Trl" kind="presentation" id="olx-PT-zoE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2t-U3-Lp5">
+                                <rect key="frame" x="308" y="536" width="276" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Y1n-JI-mWf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.5450980392" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveSeat:" destination="jN9-xD-6gI" eventType="touchUpInside" id="IFi-fb-BU7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2156862745" green="0.31372549020000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -85,12 +99,15 @@
                             <constraint firstAttribute="trailing" secondItem="ctU-16-kBt" secondAttribute="trailing" id="M8c-2i-J7N"/>
                             <constraint firstItem="i2t-U3-Lp5" firstAttribute="trailing" secondItem="v26-ux-W03" secondAttribute="trailingMargin" id="Msf-Sv-vNx"/>
                             <constraint firstItem="AIe-ow-llz" firstAttribute="top" secondItem="wHD-xS-L64" secondAttribute="bottom" constant="20" id="Pnn-fY-4YF"/>
+                            <constraint firstItem="RVC-0f-d0Z" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leading" constant="20" id="TC3-gL-9xo"/>
                             <constraint firstItem="AIe-ow-llz" firstAttribute="top" secondItem="i2t-U3-Lp5" secondAttribute="bottom" constant="20" id="atA-fs-b0a"/>
+                            <constraint firstItem="RVC-0f-d0Z" firstAttribute="top" secondItem="ctU-16-kBt" secondAttribute="bottom" constant="20" id="bFn-vR-M0F"/>
                             <constraint firstItem="rFD-iM-8aS" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leading" constant="20" id="dXN-Rd-35w"/>
                             <constraint firstItem="rFD-iM-8aS" firstAttribute="top" secondItem="v26-ux-W03" secondAttribute="top" constant="20" id="j5W-PI-jdS"/>
                             <constraint firstItem="ctU-16-kBt" firstAttribute="top" secondItem="v26-ux-W03" secondAttribute="top" id="nVx-SC-cnc"/>
                             <constraint firstAttribute="trailing" secondItem="rFD-iM-8aS" secondAttribute="trailing" constant="20" id="pIm-MN-12a"/>
                             <constraint firstItem="i2t-U3-Lp5" firstAttribute="leading" secondItem="wHD-xS-L64" secondAttribute="trailing" constant="16" id="phG-ib-nS2"/>
+                            <constraint firstAttribute="trailing" secondItem="RVC-0f-d0Z" secondAttribute="trailing" constant="20" id="rJv-RC-a5b"/>
                             <constraint firstItem="ZmS-xM-SZQ" firstAttribute="top" secondItem="ctU-16-kBt" secondAttribute="bottom" constant="-64" id="wc8-5z-ktb"/>
                             <constraint firstItem="ctU-16-kBt" firstAttribute="leading" secondItem="v26-ux-W03" secondAttribute="leading" id="zcg-Qq-drU"/>
                         </constraints>
@@ -103,22 +120,23 @@
                     <connections>
                         <outlet property="seatImageView" destination="ctU-16-kBt" id="tlZ-Ha-fUX"/>
                         <outlet property="seatNameField" destination="rFD-iM-8aS" id="0zx-0o-AI3"/>
+                        <outlet property="selectVenueButton" destination="RVC-0f-d0Z" id="GeK-9a-Atk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seE-ex-oBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="382"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Venues-->
         <scene sceneID="wHL-TT-Dcc">
             <objects>
-                <tableViewController id="9Sc-QZ-UHg" sceneMemberID="viewController">
+                <tableViewController id="9Sc-QZ-UHg" customClass="VenuesTVC" customModule="Sit_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jWg-Zb-ygl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Tn-nv-onk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="venueCell" id="8Tn-nv-onk">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Tn-nv-onk" id="tZv-j5-YMj">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -130,7 +148,7 @@
                             <outlet property="delegate" destination="9Sc-QZ-UHg" id="zJt-7C-M8V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Mbd-4u-LGf"/>
+                    <navigationItem key="navigationItem" title="Venues" id="Mbd-4u-LGf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeQ-Fg-LVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

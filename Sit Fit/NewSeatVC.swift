@@ -8,12 +8,13 @@
 
 import UIKit
 
-class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     // TODO: var seats: [PFObject]?
     
     @IBOutlet weak var seatNameField: UITextField!
     @IBOutlet weak var seatImageView: UIImageView!
+    @IBOutlet weak var selectVenueButton: UIButton!
     
     var imagePicker = UIImagePickerController()
     
@@ -23,7 +24,24 @@ class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
         
+        seatNameField.delegate = self
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if let venue = FeedData.mainData().selectedVenue {
+            
+            let venueName = venue["name"] as String
+            
+            selectVenueButton.setTitle(venueName + " (edit)", forState: .Normal)
+            
+        } else {
+            
+            selectVenueButton.setTitle("Select Venue", forState: .Normal)
+            
+        }
         
     }
     
@@ -42,18 +60,50 @@ class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
     @IBAction func cancelSeat(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
         
     }
     
+    func resizeImage(image: UIImage, withSize size: CGSize) -> UIImage {
+        
+        // make square
+        
+//        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        UIGraphicsBeginImageContext(size)
+        image.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+        
+    }
+    
     @IBAction func saveSeat(sender: AnyObject) {
         
-        // TODO: create PFObject and add it to seats
         var newSeat = PFObject(className: "Seat")
         newSeat["name"] = seatNameField.text
         newSeat["creator"] = PFUser.currentUser()
+        
+        let image = resizeImage(seatImageView.image!, withSize: CGSizeMake(540.0, 540.0))
+        
+        // turn UIImage into PFFile and add to newSeat
+        let imageFile = PFFile(name: "seat.png", data: UIImagePNGRepresentation(image))
+        newSeat["image"] = imageFile
+        
+        if let venue = FeedData.mainData().selectedVenue {
+            
+            newSeat["venue"] = venue
+            
+        }
+        
         newSeat.saveInBackground()
         
         FeedData.mainData().feedItems.append(newSeat)

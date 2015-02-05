@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -116,13 +117,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" id="OE3-xu-Euc">
+                            <tableViewCell contentMode="scaleAspectFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="200" id="fd4-74-Bj4" customClass="FeedCell" customModule="Sit_Fit" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OE3-xu-Euc" id="3Aq-gQ-yky">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fd4-74-Bj4" id="7Tv-s2-9MU">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="51T-9b-Qct">
+                                            <rect key="frame" x="10" y="10" width="180" height="180"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="51T-9b-Qct" secondAttribute="height" multiplier="1:1" id="91t-md-mHe"/>
+                                                <constraint firstAttribute="height" constant="180" id="UL1-Ml-SCB"/>
+                                                <constraint firstAttribute="width" constant="180" id="cnA-oe-y2A"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="91t-md-mHe"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seat Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-vq-oym">
+                                            <rect key="frame" x="198" y="10" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="51T-9b-Qct" secondAttribute="bottom" constant="9" id="CS4-qg-P7w"/>
+                                        <constraint firstItem="51T-9b-Qct" firstAttribute="top" secondItem="7Tv-s2-9MU" secondAttribute="top" constant="10" id="td7-Q8-heN"/>
+                                        <constraint firstItem="51T-9b-Qct" firstAttribute="leading" secondItem="7Tv-s2-9MU" secondAttribute="leading" constant="10" id="u4z-1C-DXS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
-                                    <segue destination="K3a-Xy-lXb" kind="show" id="okH-Vf-gZ7"/>
+                                    <outlet property="seatImageView" destination="51T-9b-Qct" id="FNB-77-qBg"/>
+                                    <outlet property="seatNameLabel" destination="M5V-vq-oym" id="q6b-cJ-r5f"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -152,12 +181,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" id="30j-6N-ffh">
+                            <tableViewCell contentMode="scaleAspectFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="200" id="30j-6N-ffh" customClass="FeedCell" customModule="Sit_Fit" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="30j-6N-ffh" id="pgy-t5-FsC">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-LU-yny">
+                                            <rect key="frame" x="10" y="10" width="179" height="179"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="NsM-LU-yny" secondAttribute="height" multiplier="1:1" id="OjP-Wc-agS"/>
+                                                <constraint firstAttribute="height" constant="179" id="UiM-gV-Izj"/>
+                                                <constraint firstAttribute="width" constant="179" id="YRg-q1-EPF"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="OjP-Wc-agS"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seat Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-Yi-uSZ">
+                                            <rect key="frame" x="198" y="11" width="361" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NsM-LU-yny" firstAttribute="top" secondItem="pgy-t5-FsC" secondAttribute="top" constant="10" id="6XQ-xU-0dU"/>
+                                        <constraint firstAttribute="bottom" secondItem="NsM-LU-yny" secondAttribute="bottom" constant="10" id="RFS-eI-UCN"/>
+                                        <constraint firstItem="NsM-LU-yny" firstAttribute="leading" secondItem="pgy-t5-FsC" secondAttribute="leading" constant="10" id="mIx-hB-cFX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="seatImageView" destination="NsM-LU-yny" id="vKk-lW-GIb"/>
+                                    <outlet property="seatNameLabel" destination="RTV-Yi-uSZ" id="nud-Ee-IrV"/>
                                     <segue destination="SSZ-1v-78R" kind="show" id="Mvy-bD-oR0"/>
                                 </connections>
                             </tableViewCell>
@@ -177,7 +235,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="812-Yo-cd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696" y="539"/>
+            <point key="canvasLocation" x="1696" y="538"/>
         </scene>
         <!--My Seats-->
         <scene sceneID="bkD-xS-9Qu">
