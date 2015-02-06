@@ -45,16 +45,57 @@ class MapVC: UIViewController, MKMapViewDelegate {
         
         for seat in seats {
             
-            let venue = seat["venue"] as [String:AnyObject]
+            if let venue = seat["venue"] as? [String:AnyObject] {
             
-            let locationInfo = venue["location"] as [String:AnyObject]
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(locationInfo["lat"] as Double, locationInfo["lng"] as Double)
-            annotation.title = seat["name"] as String
-            myMapView.addAnnotation(annotation)
+                if let locationInfo = venue["location"] as? [String:AnyObject] {
+                
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2DMake(locationInfo["lat"] as Double, locationInfo["lng"] as Double)
+                    annotation.title = seat["name"] as String
+                    myMapView.addAnnotation(annotation)
+                    
+                }
+                
+            }
             
         }
+        
+    }
+    
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        
+        println("accessory tapped")
+        // present VC and pass along view.annotation.title
+        
+    }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        var customPinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        customPinView.pinColor = .Purple
+        customPinView.animatesDrop = true
+        customPinView.canShowCallout = true
+        
+        var rightButton: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton
+        rightButton.addTarget(self, action: Selector(showDetail()), forControlEvents: UIControlEvents.TouchUpInside)
+        customPinView.rightCalloutAccessoryView = rightButton
+        
+        var customImage = UIImageView(image: UIImage(named: "image.png"))
+        customPinView.leftCalloutAccessoryView = customImage
+        
+        myMapView.dequeueReusableAnnotationViewWithIdentifier("pin") as? MKPinAnnotationView
+        
+        return customPinView
+        
+    }
+    
+    func showDetail() {
+        
+        println("show detail")
         
     }
 
