@@ -13,6 +13,9 @@ class FeedTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "top_icon")
+        navigationItem.titleView = UIImageView(image: image)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,6 +61,16 @@ class FeedTVC: UITableViewController {
         cell.seatInfo = seat
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        FeedData.mainData().selectedSeat = FeedData.mainData().feedItems[indexPath.row]
+        
+        var detailVC = storyboard?.instantiateViewControllerWithIdentifier("seatDetailVC") as UIViewController
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+        
     }
 
 }

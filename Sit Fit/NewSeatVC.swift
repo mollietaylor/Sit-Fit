@@ -20,6 +20,9 @@ class NewSeatVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let image = UIImage(named: "top_icon")
+        navigationItem.titleView = UIImageView(image: image)
 
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
